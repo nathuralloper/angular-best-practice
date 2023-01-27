@@ -6,6 +6,7 @@ import { map, delay } from 'rxjs/operators';
 export class DataRepositoryService {
   currentUser:any;
 
+  
   constructor() {}
 
   getCatalog():Observable<any[]> {
