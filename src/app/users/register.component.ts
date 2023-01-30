@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { UserRepositoryService } from '../services/user-repository.service';
+import { UserRepositoryService } from '../core/user-repository.service';
 import { IUser } from '../users/user.model';
 
 
@@ -39,15 +39,20 @@ export class RegisterComponent {
   
     registerUser(user:IUser) {
       this.saving=true;
+      this.saveAndReditect(user);
+    }
+  
+    cancel() {
+      this.router.navigate(['/']);
+    }
+
+    private saveAndReditect(user:IUser){
       this.userRepository.saveUser(user)
         .subscribe(
           null,
           ()=>this.saving=false,
           () => this.router.navigate(['/catalog']));
     }
-  
-    cancel() {
-      this.router.navigate(['/']);
-    }
+    
   }
   

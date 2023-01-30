@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, EMPTY, throwError } from 'rxjs';
-import { UserRepositoryService} from '../services/user-repository.service';
+import { Observable, Subject} from 'rxjs';
+import { UserRepositoryService} from '../core/user-repository.service';
 
 @Injectable()
 export class CatalogRepositoryService {
