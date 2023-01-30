@@ -5,6 +5,6 @@ import {Component} from '@angular/core'
   template: '<img *ngIf="loading" src="../../assets/images/loading.gif" />',
   inputs: ['loading']
 })
-export class LoadingComponent {
-  loading:boolean
+export class LoadingSpinnerComponent {
+  loading:boolean = false;
 }
