@@ -1,4 +1,5 @@
 import { NgModule }      from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
@@ -10,8 +11,10 @@ import { SharedModule } from './shared/shared.module';
 import { UserModule } from './users/user.module';
 import { CatalogModule } from './catalog/catalog.module';
 
+
 @NgModule({
   imports:      [
+    CommonModule,
     BrowserModule,
     CoreModule,
     SharedModule,

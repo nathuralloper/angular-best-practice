@@ -10,12 +10,15 @@ import { SignInComponent } from "./sign-in.component";
 
 @NgModule({
     imports: [
-        BrowserModule,
-        RouterModule,        
         FormsModule,
         ReactiveFormsModule,
+        RouterModule.forChild([
+            { path: "register", component: RegisterComponent },
+            { path: "sign-in", component: SignInComponent },
+        ]),        
         SharedModule, 
-        CoreModule,   ],
+        CoreModule,   
+    ],
     exports: [ ],
     declarations: [ RegisterComponent,SignInComponent ],
     providers: [  ],
